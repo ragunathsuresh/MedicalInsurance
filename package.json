@@ -1,0 +1,25 @@
+{
+  "name": "medical-insurance-premium-prediction",
+  "version": "1.0.0",
+  "description": "Production MERN + FastAPI Machine Learning Medical Insurance Premium Predictor",
+  "scripts": {
+    "start:ml": "cd ml-service && C:\\Users\\AMARNATH\\anaconda3\\python.exe -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload",
+    "start:backend": "cd backend && npm run dev",
+    "start:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "machine-learning",
+    "xgboost",
+    "random-forest",
+    "gradient-boosting",
+    "healthcare",
+    "actuarial",
+    "react",
+    "express",
+    "fastapi",
+    "shap"
+  ],
+  "author": "",
+  "license": "MIT"
+}

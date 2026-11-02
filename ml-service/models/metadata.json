@@ -1,0 +1,96 @@
+{
+  "dataset": {
+    "path": "C:\\Users\\AMARNATH\\Downloads\\archive (4)\\Medicalpremium.csv",
+    "total_rows": 986,
+    "total_features": 11,
+    "target": "PremiumPrice",
+    "train_size": 739,
+    "test_size": 247,
+    "random_state": 42,
+    "test_split": 0.25
+  },
+  "features": [
+    "Age",
+    "Diabetes",
+    "BloodPressureProblems",
+    "AnyTransplants",
+    "AnyChronicDiseases",
+    "Height",
+    "Weight",
+    "KnownAllergies",
+    "HistoryOfCancerInFamily",
+    "NumberOfMajorSurgeries",
+    "BMI"
+  ],
+  "bmi_formula": "Weight / (Height / 100.0) ** 2",
+  "models": {
+    "xgboost": {
+      "file": "xgboost_model.pkl",
+      "best_params": {
+        "learning_rate": 0.1,
+        "max_depth": 4,
+        "n_estimators": 60,
+        "subsample": 0.8
+      }
+    },
+    "gbm": {
+      "file": "gbm_model.pkl",
+      "best_params": {
+        "learning_rate": 0.1,
+        "n_estimators": 50
+      }
+    },
+    "rf": {
+      "file": "rf_model.pkl",
+      "best_params": {
+        "max_depth": 7,
+        "max_features": 1.0,
+        "min_samples_split": 3,
+        "n_estimators": 220
+      }
+    }
+  },
+  "actual_metrics": {
+    "xgboost": {
+      "name": "XGBoost",
+      "r2": 82.61736631393433,
+      "mae": 1566.7210693359375,
+      "rmse": 2753.4672687359116,
+      "mape": 6.199022665408275
+    },
+    "gbm": {
+      "name": "GBM",
+      "r2": 82.62246556229485,
+      "mae": 1640.8176994411165,
+      "rmse": 2753.0629101575205,
+      "mape": 6.4359262152884025
+    },
+    "rf": {
+      "name": "RF",
+      "r2": 83.43612331123903,
+      "mae": 1294.929394383508,
+      "rmse": 2687.8377610498464,
+      "mape": 5.292455874657236
+    }
+  },
+  "reported_metrics": {
+    "xgboost": {
+      "r2": 83.787477,
+      "mae": 1380.107056,
+      "rmse": 2659.178069,
+      "mape": 5.530829
+    },
+    "rf": {
+      "r2": 83.436123,
+      "mae": 1294.929394,
+      "rmse": 2687.837761,
+      "mape": 5.292456
+    },
+    "gbm": {
+      "r2": 81.210879,
+      "mae": 1741.845421,
+      "rmse": 2862.696368,
+      "mape": 6.823638
+    }
+  }
+}
